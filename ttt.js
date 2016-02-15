@@ -15,24 +15,53 @@ $(document).on('ready', function() {
       self.html('O').addClass('o');
       //get value of square from id and push to oSquares array
       oSquares.push(parseInt(self.attr('id').split('')[5]));
-      console.log(oSquares);
     } else {
       self.html('X').addClass('x');
       //get value of square from id and push to xSquares array
       xSquares.push(parseInt(self.attr('id').split('')[5]));
-      console.log(xSquares);
     }
 
     self.off('click');
-
     turn++;
-
-    if ( turn >= 4 ) {
-        checkForWinner();
+    if ( turn >= 5 ) {
+      checkForWinner();
     }
   });
 
-  function checkForWinner() {
-    // Select all x's and sum. If any three elements === 15, then the user has won.
+    function resetGame() {
+      location.reload();
+    }
+
+    function checkForWinner() {
+
+        for ( var i = 0; i < xSquares.length; i++ ) {
+          for ( var j = i + 1; j < xSquares.length; j++ ) {
+            for ( var k = j + 1; k < xSquares.length; k++ ) {
+              if ( xSquares[i] + xSquares[j] + xSquares[k] === 15 ) {
+                alert("X is the winner!");
+                resetGame();
+                return;
+              }
+            }
+          }
+        }
+
+        for ( var i = 0; i < oSquares.length; i++ ) {
+          for ( var j = i+1; j < oSquares.length; j++ ) {
+            for ( var k = j+1; k < oSquares.length; k++ ) {
+              if (oSquares[i] + oSquares[j] + oSquares[k] === 15) {
+                alert("O is the winner!");
+                resetGame();
+                return;
+              }
+            }
+          }
+        }
+
+        if ( turn === 9 ) {
+          alert( "Everybody loses! Christmas is cancelled!" )
+          resetGame();
+        }
+        
   }
 });

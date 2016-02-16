@@ -12,11 +12,11 @@ $(document).on('ready', function() {
     var self = $(this);
 
     if ( turn % 2 ) {
-      self.html('O').addClass('o');
+      self.html('<img src=cat.png height="100" width="100">').addClass('o');
       //get value of square from id and push to oSquares array
       oSquares.push(parseInt(self.attr('id').split('')[5]));
     } else {
-      self.html('X').addClass('x');
+      self.html('<img src=raccoon.png height="100" width="100">').addClass('x');
       //get value of square from id and push to xSquares array
       xSquares.push(parseInt(self.attr('id').split('')[5]));
     }
@@ -38,7 +38,7 @@ $(document).on('ready', function() {
           for ( var j = i + 1; j < xSquares.length; j++ ) {
             for ( var k = j + 1; k < xSquares.length; k++ ) {
               if ( xSquares[i] + xSquares[j] + xSquares[k] === 15 ) {
-                alert("X is the winner!");
+                alert("Raccoons are the winners!");
                 resetGame();
                 return;
               }
@@ -50,7 +50,7 @@ $(document).on('ready', function() {
           for ( var j = i+1; j < oSquares.length; j++ ) {
             for ( var k = j+1; k < oSquares.length; k++ ) {
               if (oSquares[i] + oSquares[j] + oSquares[k] === 15) {
-                alert("O is the winner!");
+                alert("Cats are the winners!");
                 resetGame();
                 return;
               }
@@ -62,6 +62,6 @@ $(document).on('ready', function() {
           alert( "Everybody loses! Christmas is cancelled!" )
           resetGame();
         }
-        
+
   }
 });

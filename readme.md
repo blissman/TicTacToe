@@ -6,7 +6,7 @@ performed with magic square sums.
 
 ## Instructions
 
-1) Clone this repository.
-2) Open tictactoe.html.
-3) ???
-4) Profit!
+1. Clone this repository.
+2. Open tictactoe.html.
+3. ???
+4. Profit!

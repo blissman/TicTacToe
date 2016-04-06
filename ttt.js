@@ -3,13 +3,39 @@ $(document).on('ready', function() {
   var xSquares = [];
   var oSquares = [];
 
-  $('td').on('click', function() {
+  $(document).on('keypress', function(e) {
     // this === DOM Element
     // $(this) === jQuery Object
 
     // Idempotent = Always get the same outcome
     // Memoization = Store a computed output for repeated use
-    var self = $(this);
+    if (e.which === 113) {
+      var self = $("#cell-2");
+    }
+    else if (e.which === 119) {
+      var self = $("#cell-7");
+    }
+    else if (e.which === 101) {
+      var self = $("#cell-6");
+    }
+    else if (e.which === 97) {
+      var self = $("#cell-9");
+    }
+    else if (e.which === 115) {
+      var self = $("#cell-5");
+    }
+    else if (e.which === 100) {
+      var self = $("#cell-1");
+    }
+    else if (e.which === 122) {
+      var self = $("#cell-4");
+    }
+    else if (e.which === 120) {
+      var self = $("#cell-3");
+    }
+    else if (e.which === 99) {
+      var self = $("#cell-8");
+    }
 
     if ( turn % 2 ) {
       self.html('<img src=cat.png height="100" width="100">').addClass('o');

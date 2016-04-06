@@ -54,6 +54,31 @@ $(document).on('ready', function() {
     }
   });
 
+  $('td').on('click', function() {
+    // this === DOM Element
+    // $(this) === jQuery Object
+
+    // Idempotent = Always get the same outcome
+    // Memoization = Store a computed output for repeated use
+    var self = $(this);
+
+    if ( turn % 2 ) {
+      self.html('<img src=cat.png height="100" width="100">').addClass('o');
+      //get value of square from id and push to oSquares array
+      oSquares.push(parseInt(self.attr('id').split('')[5]));
+    } else {
+      self.html('<img src=raccoon.png height="100" width="100">').addClass('x');
+      //get value of square from id and push to xSquares array
+      xSquares.push(parseInt(self.attr('id').split('')[5]));
+    }
+
+    self.off('click');
+    turn++;
+    if ( turn >= 5 ) {
+      checkForWinner();
+    }
+  });
+
     function resetGame() {
       location.reload();
     }

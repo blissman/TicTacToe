@@ -3,12 +3,14 @@ $(document).on('ready', function() {
   var xSquares = [];
   var oSquares = [];
 
-  $(document).on('keypress', function(e) {
-    // this === DOM Element
-    // $(this) === jQuery Object
+  // this === DOM Element
+  // $(this) === jQuery Object
 
-    // Idempotent = Always get the same outcome
-    // Memoization = Store a computed output for repeated use
+  // Idempotent = Always get the same outcome
+  // Memoization = Store a computed output for repeated use
+
+  $(document).on('keypress', function(e) {
+
     if (e.which === 113 && $("#cell-2").hasClass("")) {
       var self = $("#cell-2");
     }
@@ -59,11 +61,6 @@ $(document).on('ready', function() {
   });
 
   $('td').on('click', function() {
-    // this === DOM Element
-    // $(this) === jQuery Object
-
-    // Idempotent = Always get the same outcome
-    // Memoization = Store a computed output for repeated use
     var self = $(this);
 
     if ( turn % 2 ) {

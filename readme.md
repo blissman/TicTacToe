@@ -1,6 +1,6 @@
 # Tic-Tac-Toe (Raccoon and Cat Edition)
 
-Tic-Tac-Toe is a simple web game built with Javascript and JQuery. Cartoon
+Tic-Tac-Toe is a simple web game built with JavaScript and jQuery. Cartoon
 raccoons and cats replace the more traditional X's and O's, and game logic is
 performed with magic square sums.
 

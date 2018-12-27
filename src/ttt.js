@@ -35,11 +35,11 @@ $(document).on("ready", function() {
 
         if (self !== "null") {
             if (turn % 2) {
-                self.html("<img src=cat.png height=\"100\" width=\"100\">").addClass("o");
+                self.html("<img src=images/cat.png height=\"100\" width=\"100\">").addClass("o");
                 //get value of square from id and push to oSquares array
                 oSquares.push(parseInt(self.attr("id").split("")[5]));
             } else {
-                self.html("<img src=raccoon.png height=\"100\" width=\"100\">").addClass("x");
+                self.html("<img src=images/raccoon.png height=\"100\" width=\"100\">").addClass("x");
                 //get value of square from id and push to xSquares array
                 xSquares.push(parseInt(self.attr("id").split("")[5]));
             }
@@ -55,11 +55,11 @@ $(document).on("ready", function() {
         var self = $(this);
 
         if (turn % 2) {
-            self.html("<img src=cat.png height=\"100\" width=\"100\">").addClass("o");
+            self.html("<img src=images/cat.png height=\"100\" width=\"100\">").addClass("o");
             //get value of square from id and push to oSquares array
             oSquares.push(parseInt(self.attr("id").split("")[5]));
         } else {
-            self.html("<img src=raccoon.png height=\"100\" width=\"100\">").addClass("x");
+            self.html("<img src=images/raccoon.png height=\"100\" width=\"100\">").addClass("x");
             //get value of square from id and push to xSquares array
             xSquares.push(parseInt(self.attr("id").split("")[5]));
         }

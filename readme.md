@@ -9,7 +9,14 @@ QWE, ASD, ZXC respectively.
 
 ## Instructions
 
-1. Clone this repository.
-2. Open tictactoe.html.
-3. ???
-4. Profit!
+1. Clone this repository
+2. Open `./src/tictactoe.html`
+3. Play the game!
+
+## Build Instructions
+
+Gulp has also been added to this repository (mostly as a proof of concept). To build the files, you'll need node.js and npm installed.
+
+1. `$ npm install`
+2. `$ gulp`
+3. Built files will be in the `$ ~./dist/` folder

@@ -19,4 +19,4 @@ Gulp has also been added to this repository (mostly as a proof of concept). To b
 
 1. `$ npm install`
 2. `$ gulp`
-3. Built files will be in the `$ ~./dist/` folder
+3. Built files will be in the `./dist/` folder
